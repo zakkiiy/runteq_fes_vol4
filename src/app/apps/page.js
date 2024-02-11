@@ -3,13 +3,18 @@ import Image from 'next/image'
 import Link from 'next/link';
 import appsData from '../data/appsData'
 import {useState} from 'react'
+import { useRouter } from 'next/navigation'
 
 const App = () => {
-  
+  const router = useRouter();
   const [selectedCategory, setSelectedCategory] = useState('全て');
   const filteredData = appsData.filter(data =>
     selectedCategory === '全て' || data.category === selectedCategory
   );
+
+  const detailHandleClick = (id) => {
+    router.push(`/apps/${id}`);
+  };
 
   return(
     <div>
@@ -40,7 +45,7 @@ const App = () => {
               <p>If a dog chews shoes whose shoes does he choose?</p>
               <div className="card-actions">
                 <button
-                  
+                  onClick={() => detailHandleClick(data.id)}
                   className="btn btn-primary"
                 >
                   詳細を見にいく
