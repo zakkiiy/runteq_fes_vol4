@@ -7,8 +7,14 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        sakura: '#ffafcc', // 桜色
+        botan: '#e8316d', // 牡丹色
+      },
       backgroundImage: {
         'sakura': "url('/path/to/sakura-background.jpg')",
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       keyframes: {
         slideIn: {
@@ -26,5 +32,7 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require("daisyui"),
+  ],
 }
