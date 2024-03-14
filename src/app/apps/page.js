@@ -18,7 +18,7 @@ const App = () => {
 
   return(
     <div style={{ backgroundImage: "url('sakura_haikei.jpg')", backgroundPosition: 'center', backgroundSize: 'cover', minHeight: '100vh' }}>
-      <div role="tablist" className="tabs tabs-boxed">
+      <div role="tablist" className="tabs tabs-boxed overflow-x-auto">
         <a onClick={() => setSelectedCategory('全て')} className={`tab ${selectedCategory === '全て' ? 'tab-active' : ''}`}>全て</a>
         <a onClick={() => setSelectedCategory('現役エンジニア')} className={`tab ${selectedCategory === '現役エンジニア' ? 'tab-active' : ''}`}>現役エンジニア</a>
         <a onClick={() => setSelectedCategory('ルーキー')} className={`tab ${selectedCategory === 'ルーキー' ? 'tab-active' : ''}`}>ルーキー</a>
