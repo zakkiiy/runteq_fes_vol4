@@ -24,6 +24,10 @@ export default function Home() {
   }, []);
 
   return (
+    <div
+    className="relative w-full h-full min-h-screen bg-white"
+    style={{ backgroundImage: "url('/sakura_haikei.jpg')", backgroundPosition: 'center', backgroundSize: 'cover' }}
+  >
     <div className="relative w-full h-full min-h-screen bg-white">
       {/* <div>{Data[1].name}</div> */}
       <Confetti
@@ -60,6 +64,7 @@ export default function Home() {
           </div>
         </div>
       </div> */}
+    </div>
     </div>
   );
 }
