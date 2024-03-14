@@ -40,8 +40,8 @@ const App = () => {
                       className="rounded-xl"
                     />
                       <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-0 hover:bg-opacity-50 rounded-xl transition-all">
-                        <p className="text-black text-xl hidden hover z-10">クリックするとアプリを触れるよ</p>
-            </div>
+                        
+                      </div>
                   </div>
                 </Link>
               </div>
