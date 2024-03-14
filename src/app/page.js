@@ -8,7 +8,7 @@ import { useRouter } from 'next/navigation'
 
 export default function Home() {
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
-  const message = "ようこそ、RUNTEQ祭へ";
+  const message = "ようこそ、\nRUNTEQ祭へ";
   const router = useRouter();
   
   const joinHandleClick = () => {
@@ -37,7 +37,7 @@ export default function Home() {
         colors={['#FFC0CB', '#FFB6C1', '#FF69B4']}
       />
       <div className="text-center p-12">
-        <h1 className="text-4xl font-bold text-black">
+        <h1 className="text-4xl font-bold text-black message">
           {message.split("").map((char, index) => (
             <span key={index} className="inline-block opacity-0 animate-slide-in" style={{ animationDelay: `${index * 0.1}s` }}>
               {char}
@@ -46,7 +46,6 @@ export default function Home() {
         </h1>
       </div>
       <div className="relative w-full h-full min-h-screen bg-white flex justify-center items-center">
-      {/* ...（他のコンテンツ） */}
         <button 
           onClick={joinHandleClick}
           className="btn bg-pink-500 text-white rounded-full btn-lg"
