@@ -17,7 +17,7 @@ const App = () => {
   };
 
   return(
-    <div>
+    <div style={{ backgroundImage: "url('sakura_haikei.jpg')", backgroundPosition: 'center', backgroundSize: 'cover', minHeight: '100vh' }}>
       <div role="tablist" className="tabs tabs-boxed">
         <a onClick={() => setSelectedCategory('全て')} className={`tab ${selectedCategory === '全て' ? 'tab-active' : ''}`}>全て</a>
         <a onClick={() => setSelectedCategory('現役エンジニア')} className={`tab ${selectedCategory === '現役エンジニア' ? 'tab-active' : ''}`}>現役エンジニア</a>
@@ -29,19 +29,28 @@ const App = () => {
         {filteredData.map((data) => (
           <div key={data.id} className="card w-96 bg-base-100 shadow-xl">
             <figure className="px-10 pt-10">
-              <Link href={data.url} passHref target="_blank">
-                <Image
-                  src={data.appImg}
-                  alt="桜の背景"
-                  width={500}
-                  height={300}
-                  className="rounded-xl"
-                />
-              </Link>
+              <div className="relative">
+                <Link href={data.url} passHref target="_blank">
+                  <div className="block relative cursor-pointer">
+                    <Image
+                      src={data.appImg}
+                      alt="桜の背景"
+                      width={500}
+                      height={300}
+                      className="rounded-xl"
+                    />
+                      <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-0 hover:bg-opacity-50 rounded-xl transition-all">
+                        <p className="text-black text-xl hidden hover z-10">クリックするとアプリを触れるよ</p>
+            </div>
+                  </div>
+                </Link>
+              </div>
             </figure>
             
             <div className="card-body items-center text-center">
-              <h2 className="card-title">{data.name}</h2>
+            <h2 className="card-title">{data.class}</h2>
+              <h2 className="card-title text-black-900">{data.name}</h2>
+              <h2 className="card-title text-pink-500">{data.appName}</h2>
               <p>If a dog chews shoes whose shoes does he choose?</p>
               <div className="card-actions">
                 <button

@@ -1,5 +1,7 @@
 import { Inter } from 'next/font/google'
 import './globals.css'
+import { Klee_One } from "next/font/google";
+const KleeOne = Klee_One({ weight: "600", subsets: ["latin"] });
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -11,7 +13,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      
+      <body className={KleeOne.className}>{children}</body>
     </html>
   )
 }
