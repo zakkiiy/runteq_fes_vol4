@@ -13,7 +13,7 @@ const App = () => {
   );
 
   const detailHandleClick = (id) => {
-    router.push(`/apps/${id}`);
+    window.open(`/apps/${id}`, '_blank');
   };
 
   return(
@@ -28,20 +28,19 @@ const App = () => {
       <div className="flex flex-wrap justify-center gap-4">
         {filteredData.map((data) => (
           <div key={data.id} className="card w-96 bg-base-100 shadow-xl">
-            <figure className="px-10 pt-10">
+            <figure className="px-10 pt-10" style={{ width: '400px', height: '300px' }}>
               <div className="relative">
                 <Link href={data.url} passHref target="_blank">
                   <div className="block relative cursor-pointer">
                     <Image
                       src={data.appImg}
-                      alt="桜の背景"
+                      alt="app image"
                       width={500}
                       height={300}
                       className="rounded-xl"
                     />
-                      <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-0 hover:bg-opacity-50 rounded-xl transition-all">
-                        
-                      </div>
+                    <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-0 hover:bg-opacity-50 rounded-xl transition-all">                      
+                    </div>
                   </div>
                 </Link>
               </div>

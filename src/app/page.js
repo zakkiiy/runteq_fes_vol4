@@ -8,6 +8,7 @@ import { useRouter } from 'next/navigation'
 
 export default function Home() {
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
+  const [images, setImages] = useState([]);
   const message = "ようこそ、\nRUNTEQ祭へ";
   const router = useRouter();
   
@@ -22,6 +23,29 @@ export default function Home() {
       height: window.innerHeight,
     });
   }, []);
+
+  useEffect(() => {
+    // 更新
+    selectRandomImages();
+    const intervalId = setInterval(() => {
+      selectRandomImages();
+    }, 5000);
+
+    return () => clearInterval(intervalId);
+  }, []);
+
+  // 画像選択
+  const selectRandomImages = () => {
+    setImages(prevImages => prevImages.map(img => ({ ...img, isVisible: false })));
+
+    setTimeout(() => {
+      const shuffled = [...Data].sort(() => 0.5 - Math.random());
+      setImages(shuffled.slice(0, 3).map(img => ({
+        ...img,
+        isVisible: true
+      })));
+    }, 1000);
+  };
 
   return (
     <div
@@ -45,7 +69,23 @@ export default function Home() {
           ))}
         </h1>
       </div>
-      <div className="relative w-full h-full min-h-screen bg-white flex justify-center items-center">
+      <div className="flex-container">
+        {images.map((img, index) => (
+          <div
+            key={index}
+            className={`w-1/4 ${img.isVisible ? 'animate-fade-in' : 'animate-fade-out'}`}
+          >
+            <Image
+              src={img.appImg}
+              alt={img.appName}
+              width={300}
+              height={300}
+              className="rounded-xl"
+            />
+          </div>
+        ))}
+      </div>
+      <div className="btn-container relative w-full flex justify-center items-center" style={{ marginTop: '260px' }}>
         <button 
           onClick={joinHandleClick}
           className="btn bg-pink-500 text-white rounded-full btn-lg"
