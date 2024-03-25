@@ -1,5 +1,6 @@
 'use client'
 
+import React from 'react';
 import { useRouter, useSearchParams, useParams } from 'next/navigation';
 import appsData from '@/app/data/appsData';
 import Image from 'next/image'
@@ -26,7 +27,15 @@ const AppDetail = () => {
       <h1 className="text-4xl font-bold text-pink-500 mb-4">{data.appName}</h1>
       <p className="text-lg mb-8"><span className="font-extrabold">制作者：</span>{data.name}</p>
       <p className="mb-10"><span className="font-extrabold text-xl">アプリについて：</span><br/>{data.description}</p>
-      <p className="mb-8"><span className="font-extrabold text-xl">力を入れたこと・工夫ポイント：</span><br/>{data.commnet}</p>
+      <p className="mb-8">
+        <span className="font-extrabold text-xl">力を入れたこと・工夫ポイント：</span><br/>
+            {data.commnet.split('\n').map((line, index) => (
+          <React.Fragment key={index}>
+            {line}
+            <br />
+          </React.Fragment>
+        ))}
+      </p>
       <a href={data.githubUrl} target="_blank" rel="noopener noreferrer"
          className="inline-block bg-gray-200 text-gray-800 py-2 px-4 rounded hover:bg-gray-400 transition-colors mr-10">
         GitHub Repository
