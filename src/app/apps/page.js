@@ -31,7 +31,7 @@ const App = () => {
             <figure className="px-10 pt-10" style={{ width: '400px', height: '300px' }}>
               <div className="relative">
                 <Link href={data.url} passHref target="_blank">
-                  <div className="block relative cursor-pointer">
+                  <div className="block relative cursor-pointer mt-6">
                     <Image
                       src={data.appImg}
                       alt="app image"
@@ -48,13 +48,12 @@ const App = () => {
             
             <div className="card-body items-center text-center">
             <h2 className="card-title">{data.class}</h2>
-              <h2 className="card-title text-black-900">{data.name}</h2>
+            <h2 className="card-title text-black-900">{data.name}</h2>
               <h2 className="card-title text-pink-500">{data.appName}</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
               <div className="card-actions">
                 <button
                   onClick={() => detailHandleClick(data.id)}
-                  className="btn btn-primary"
+                  className="btn btn-primary hover:bg-blue-600 mt-6"
                 >
                   詳細を見にいく
                 </button>
