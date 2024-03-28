@@ -13,9 +13,9 @@ const App = () => {
   );
 
   const detailHandleClick = (id) => {
-    window.open(`/apps/${id}`, '_blank');
+    window.location.href = `/apps/${id}`;
   };
-
+  
   return(
     <div style={{ backgroundImage: "url('sakura_haikei.jpg')", backgroundPosition: 'center', backgroundSize: 'cover', minHeight: '100vh' }}>
       <div role="tablist" className="tabs tabs-boxed overflow-x-auto">

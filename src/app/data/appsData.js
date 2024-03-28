@@ -14,7 +14,7 @@ const appsData = [
     id: 2,
     name: '44期 あーちゃん',
     appName: 'steteco',
-    category: 'ルーキー', // 追記
+    category: 'ルーキー',
     url: 'https://steteco-dansyari.com',
     appImg: '/app/steteco.png',
     description: '今回のアプリは、不用品の整理をしている際に「もったいないから」「フリマアプリで売れるかもしれないから」と考えてしまい、捨てる決断ができない優柔不断な方向けの、断捨離を後押しするサービスです。',
@@ -82,10 +82,10 @@ const appsData = [
     appName: 'To.gather',
     category: 'チーム開発',
     url: 'https://togatherapp.net/',
-    appImg: '', // 追記
+    appImg: '/app/togather.jpg',
     description: 'グループを作って人を集めてチャットや予定調整ができるアプリです。',
     commnet: 'Hotwiireやモーダルで画面の遷移を少なくして少しでも快適に使えるようにしました。 Xで拡散してリンクからグループへの参加申請を送ることができます。RUNTEQに入学して４ヶ月目だった時の初学者４人が頑張ってアプリ開発をしました！ ３人のメンバーは働きながらで大変だったと思いますが、最後まで頑張ってくれました！ ',
-    githubUrl: '' // 追記
+    githubUrl: 'https://github.com/tomoprogra/teamplan'
   },
   {
     id: 9,
@@ -102,7 +102,7 @@ const appsData = [
     id: 10,
     name: '44期 さとはる',
     appName: 'えぞとらべる',
-    category: 'ルーキー',
+    category: '現役エンジニア',
     url: 'https://ezo-travel.com/',
     appImg: '/app/ezo.png',
     description: '北海道をもっと身近に感じてもらうためのアプリです。',
@@ -113,7 +113,7 @@ const appsData = [
     id: 11,
     name: '44期 さとはる',
     appName: 'くだものの森',
-    category: 'ルーキー', // 追記
+    category: '現役エンジニア',
     url: 'https://fruit-forest.onrender.com',
     appImg: '/app/fruits.png',
     description: 'フルーツをキャッチするゲームです。',
@@ -126,10 +126,10 @@ const appsData = [
     appName: 'PythagoraMaker',
     category: 'チーム開発',
     url: 'https://pythagora-maker.vercel.app/',
-    appImg: '',  // 追記
+    appImg: '/app/pythagoramaker.png',
     description: '誰よりも早くスイッチを押せ！図形を使って考えるパズルゲーム！',
     commnet: '全員/Matter.jsを使用したゲームアプリ作成\nとぴ/「UI周りやホームページ・About usの仕込み\nYY/｢インフラ・ステージ編集画面｣\nMaTTa/｢ゲームデザイン｣\nうぅたん/｢DBからユーザー名・ステージタイトルを取得し、ユーザーが作成したステージに表示させる実装｣\nボド/｢構想から作り上げた画面遷移図｣',
-    githubUrl: '' // 追記
+    githubUrl: 'https://github.com/raito2180/pythagora_maker'
   },
   {
     id: 13,
@@ -168,7 +168,7 @@ const appsData = [
     id: 16,
     name: '44期 だい (小林 大悟)',
     appName: '...次、どこ行く？',
-    category: 'ルーキー',
+    category: '現役エンジニア',
     url: 'https://your-next-destination.com/',
     appImg: '/app/your_next.png',
     description: 'ドライブ中に次の行き先決めに困った際、その場の気分に近い行き先を短時間で決めることができるサービス。',
@@ -234,7 +234,7 @@ const appsData = [
     id: 22,
     name: '41期 けんと',
     appName: '16type Favorite Database',
-    category: 'ルーキー', // 追記
+    category: 'ルーキー',
     url: 'https://favorite-database-16type-f-5f78fa224595.herokuapp.com/',
     appImg: '/app/16types.png',
     description: 'MBTIタイプ診断をしたことのあるユーザーが、メディア(音楽・アニメetc.)ごとに、好きな作品を投稿することにより、MBTIタイプごとの好みをデータベース化するWedアプリケーションです！（現在、音楽アーティストのみ）',
@@ -313,7 +313,7 @@ const appsData = [
     appName: 'Runtecker',
     category: 'チーム開発',
     url: 'https://runtecker-frontend-1bc1378eedd1.herokuapp.com/login',
-    appImg: '', // 追記
+    appImg: '/app/runtecker.png',
     description: 'RUNTEQコミュニティの受講生や卒業生のプロフィール検索アプリです。これは、RUNTEQ公式アプリの機能追加としての提案です。皆のMattermost、GitHub、X、Qiita、noteなどのSNSのアカウント名が、誰が誰だかわからなくなってしまう問題を解決します！ニックネーム、タグ、住んでいる場所、入学期など、様々な条件で受講生や卒業生を探すことができ、皆の自己紹介やSNSへのリンクなどの情報を参照することが可能となっています。',
     commnet: '・データベース設計（ER図）をチームの意見を取り入れながら綺麗なER図を心掛けて作成しました！！\n・検索機能をGemを使わず実装しました。\n・認証機能の実装をがんばりました。また、GithubのRunteq組織メンバーを用いてRUNTEQ生の識別を行いました。 \n・ユーザー一覧では一人ひとりの情報はできるだけ少なくかつシンプルなデザインにしました。\n・Reactのライブラリを活用し、ユーザに設定できるタグがぬるぬる動くようにして操作性を向上しました。\n・7人でのチーム開発が円滑に行えるよう、GitHub Issue, GitHub Projectsを取り入れたり、Heroku＋GitHub ActionsによるDockerコンテナの自動デプロイや、DBの自動マイグレーションを導入しました！',
     githubUrl: '' // 追加
@@ -346,6 +346,7 @@ const appsData = [
     appName: '来る。きっと来る。',
     category: '現役エンジニア',
     url: '', // 追記
+    phone: '010-1-650-946-1256',
     appImg: '/app/kuru.jpg',
     description: '電話をかけるとおかしな音が。電話を切って数分後あなたの電話に・・・（国際電話になるので、電話料金にお気をつけください。ちなみに僕のTwilioアカウントにもお金がかかってくるので、使いすぎるとお互いの財布が痛みます。）',
     commnet: '今回ノンフレームワークのCGIのみで作りました。また、rubyですがActiveRecordを使わずにDBアクセスもシンプルに実装しました。あとデバッグするのに毎回お金がかかるので、なるべくデバッグしないように実装しました。',
@@ -366,7 +367,7 @@ const appsData = [
     id: 34,
     name: '44期 ルカ',
     appName: 'インクコレクション',
-    category: 'ルーキー', // 追記
+    category: '現役エンジニア',
     url: 'https://ink-collection.fly.dev/',
     appImg: '/app/inkcollection.jpg',
     description: '自分が使っている万年筆とそのインクを管理するアプリです。',
