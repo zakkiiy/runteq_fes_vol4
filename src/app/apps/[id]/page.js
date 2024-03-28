@@ -40,10 +40,10 @@ const AppDetail = () => {
          className="inline-block bg-gray-200 text-gray-800 py-2 px-4 rounded hover:bg-gray-400 transition-colors mr-10">
         GitHub Repository
       </a>
-      <a href={data.url} target="_blank" rel="noopener noreferrer"
-         className="inline-block bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700 transition-colors mb-4">
-        アプリを試す
-      </a>
+      <a href={data.url || `tel:${data.phone}`} target="_blank" rel="noopener noreferrer"
+            className="inline-block bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700 transition-colors mb-4">
+            {data.url ? 'アプリを試す' : data.phone}
+          </a>
     </div>
   </div>
   )
