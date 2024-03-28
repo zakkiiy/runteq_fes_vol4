@@ -345,7 +345,7 @@ const appsData = [
     name: '校長 ひさじゅ',
     appName: '来る。きっと来る。',
     category: '現役エンジニア',
-    url: '', // 追記
+    url: 'https://runteq-fes-vol4.vercel.app/apps/32', // 追記
     phone: '010-1-650-946-1256',
     appImg: '/app/kuru.jpg',
     description: '電話をかけるとおかしな音が。電話を切って数分後あなたの電話に・・・（国際電話になるので、電話料金にお気をつけください。ちなみに僕のTwilioアカウントにもお金がかかってくるので、使いすぎるとお互いの財布が痛みます。）',
