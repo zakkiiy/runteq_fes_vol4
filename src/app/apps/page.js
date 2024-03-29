@@ -15,7 +15,7 @@ const App = () => {
   const detailHandleClick = (id) => {
     window.location.href = `/apps/${id}`;
   };
-  
+
   return(
     <div style={{ backgroundImage: "url('sakura_haikei.jpg')", backgroundPosition: 'center', backgroundSize: 'cover', minHeight: '100vh' }}>
       <div role="tablist" className="tabs tabs-boxed overflow-x-auto">
@@ -24,6 +24,12 @@ const App = () => {
         <a onClick={() => setSelectedCategory('ルーキー')} className={`tab ${selectedCategory === 'ルーキー' ? 'tab-active' : ''}`}>ルーキー</a>
         <a onClick={() => setSelectedCategory('Newcomer')} className={`tab ${selectedCategory === 'Newcomer' ? 'tab-active' : ''}`}>Newcomer</a>
         <a onClick={() => setSelectedCategory('チーム開発')} className={`tab ${selectedCategory === 'チーム開発' ? 'tab-active' : ''}`}>チーム開発</a>
+      </div>
+      <div className="mt-8 mb-8 text-center">
+        <a href="URL" className="text-2xl font-extrabold text-pink-400 hover:text-pink-700" 
+          style={{ textDecoration: "underline", textDecorationStyle: "wavy" }}>
+          投票はこちらから!!
+        </a>
       </div>
       <div className="flex flex-wrap justify-center gap-4">
         {filteredData.map((data) => (

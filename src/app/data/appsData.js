@@ -177,7 +177,7 @@ const appsData = [
   },
   {
     id: 17,
-    name: '47期 あきもと',
+    name: '47期B あきもと',
     appName: 'SAKE ZUKI',
     category: 'ルーキー',
     url: 'https://sake-suki-ebb8b0a18752.herokuapp.com/',
