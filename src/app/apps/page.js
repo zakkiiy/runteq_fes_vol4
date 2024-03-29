@@ -2,28 +2,37 @@
 import Image from 'next/image'
 import Link from 'next/link';
 import appsData from '../data/appsData'
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import { useRouter } from 'next/navigation'
 
 const App = () => {
   const router = useRouter();
-  const [selectedCategory, setSelectedCategory] = useState('全て');
+  const initialCategory = typeof window !== 'undefined' ? localStorage.getItem('selectedCategory') || '全て' : '全て';
+  const [selectedCategory, setSelectedCategory] = useState(initialCategory);
   const filteredData = appsData.filter(data =>
     selectedCategory === '全て' || data.category === selectedCategory
   );
 
+  useEffect(() => {
+    localStorage.setItem('selectedCategory', selectedCategory);
+  }, [selectedCategory]);
+
+  const handleCategoryChange = (category) => {
+    setSelectedCategory(category);
+  };
+
   const detailHandleClick = (id) => {
-    window.location.href = `/apps/${id}`;
+    router.push(`/apps/${id}`);
   };
 
   return(
     <div style={{ backgroundImage: "url('sakura_haikei.jpg')", backgroundPosition: 'center', backgroundSize: 'cover', minHeight: '100vh' }}>
       <div role="tablist" className="tabs tabs-boxed overflow-x-auto">
-        <a onClick={() => setSelectedCategory('全て')} className={`tab ${selectedCategory === '全て' ? 'tab-active' : ''}`}>全て</a>
-        <a onClick={() => setSelectedCategory('現役エンジニア')} className={`tab ${selectedCategory === '現役エンジニア' ? 'tab-active' : ''}`}>現役エンジニア</a>
-        <a onClick={() => setSelectedCategory('ルーキー')} className={`tab ${selectedCategory === 'ルーキー' ? 'tab-active' : ''}`}>ルーキー</a>
-        <a onClick={() => setSelectedCategory('Newcomer')} className={`tab ${selectedCategory === 'Newcomer' ? 'tab-active' : ''}`}>Newcomer</a>
-        <a onClick={() => setSelectedCategory('チーム開発')} className={`tab ${selectedCategory === 'チーム開発' ? 'tab-active' : ''}`}>チーム開発</a>
+        <a onClick={() => handleCategoryChange('全て')} className={`tab ${selectedCategory === '全て' ? 'tab-active' : ''}`}>全て</a>
+        <a onClick={() => handleCategoryChange('現役エンジニア')} className={`tab ${selectedCategory === '現役エンジニア' ? 'tab-active' : ''}`}>現役エンジニア</a>
+        <a onClick={() => handleCategoryChange('ルーキー')} className={`tab ${selectedCategory === 'ルーキー' ? 'tab-active' : ''}`}>ルーキー</a>
+        <a onClick={() => handleCategoryChange('Newcomer')} className={`tab ${selectedCategory === 'Newcomer' ? 'tab-active' : ''}`}>Newcomer</a>
+        <a onClick={() => handleCategoryChange('チーム開発')} className={`tab ${selectedCategory === 'チーム開発' ? 'tab-active' : ''}`}>チーム開発</a>
       </div>
       <div className="mt-8 mb-8 text-center">
         <a href="URL" className="text-4xl font-black text-pink-400 hover:text-pink-800" 
