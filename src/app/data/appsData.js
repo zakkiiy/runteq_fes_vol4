@@ -224,7 +224,7 @@ const appsData = [
     name: '37期 MIDORI',
     appName: 'Mt. Stupid',
     category: '現役エンジニア',
-    url: 'https://kanzen-ni-rikaishita.pages.dev/top',
+    url: 'https://kanzen-ni-rikaishita.com',
     appImg: '/app/mtstupit.png',
     description: 'Mt. Stupidを登って「完全に理解した」を目指す、0→1キャッチアップの共有・実践サイト。',
     commnet: 'Bun🥟 & Hono🔥 & HTMX🙅‍♀️ & Cloudflare Pages🌥️ & Vite⚡️ & D1🗄️ & Tailwind CSS🎨を使いました。新しい技術にしたのはGPTに頼りきりにならず、ドキュメントやソースコードの検索をしてみることを自分の中の課題にしました。最終的にドキュメントをいい感じにまとめてくれるClaude3にいつの間にか課金していましたが笑、ドキュメントへの苦手意識がなくなったり、初めてDiscord Communityで英語で質問してみたり、自分のいい経験になりました。',
