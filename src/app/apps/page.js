@@ -26,9 +26,9 @@ const App = () => {
         <a onClick={() => setSelectedCategory('チーム開発')} className={`tab ${selectedCategory === 'チーム開発' ? 'tab-active' : ''}`}>チーム開発</a>
       </div>
       <div className="mt-8 mb-8 text-center">
-        <a href="URL" className="text-2xl font-extrabold text-pink-400 hover:text-pink-700" 
+        <a href="URL" className="text-4xl font-black text-pink-400 hover:text-pink-800" 
           style={{ textDecoration: "underline", textDecorationStyle: "wavy" }}>
-          投票はこちらから!!
+          投票はこちらをクリック!!
         </a>
       </div>
       <div className="flex flex-wrap justify-center gap-4">
