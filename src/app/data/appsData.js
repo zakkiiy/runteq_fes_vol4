@@ -117,7 +117,7 @@ const appsData = [
     url: 'https://fruit-forest.onrender.com',
     appImg: '/app/fruits.png',
     description: 'フルーツをキャッチするゲームです。',
-    commnet: '技術に触れるためとはいえせっかく作ったので出してみました。\nVimmerに配慮した点。',
+    commnet: '技術に触れるためとはいえせっかく作ったので出してみました。\nVimmerに配慮した点。\n\n※Renderの枠の都合により、4月からアプリを触ることができます。',
     githubUrl: 'https://github.com/satou-haruka-37/fruit_forest'
   },
   {
@@ -316,7 +316,7 @@ const appsData = [
     appImg: '/app/runtecker.png',
     description: 'RUNTEQコミュニティの受講生や卒業生のプロフィール検索アプリです。これは、RUNTEQ公式アプリの機能追加としての提案です。皆のMattermost、GitHub、X、Qiita、noteなどのSNSのアカウント名が、誰が誰だかわからなくなってしまう問題を解決します！ニックネーム、タグ、住んでいる場所、入学期など、様々な条件で受講生や卒業生を探すことができ、皆の自己紹介やSNSへのリンクなどの情報を参照することが可能となっています。',
     commnet: '・データベース設計（ER図）をチームの意見を取り入れながら綺麗なER図を心掛けて作成しました！！\n・検索機能をGemを使わず実装しました。\n・認証機能の実装をがんばりました。また、GithubのRunteq組織メンバーを用いてRUNTEQ生の識別を行いました。 \n・ユーザー一覧では一人ひとりの情報はできるだけ少なくかつシンプルなデザインにしました。\n・Reactのライブラリを活用し、ユーザに設定できるタグがぬるぬる動くようにして操作性を向上しました。\n・7人でのチーム開発が円滑に行えるよう、GitHub Issue, GitHub Projectsを取り入れたり、Heroku＋GitHub ActionsによるDockerコンテナの自動デプロイや、DBの自動マイグレーションを導入しました！',
-    githubUrl: '' // 追加
+    githubUrl: 'https://github.com/rayto298/runtecker' // 追加
   },
   {
     id: 30,
