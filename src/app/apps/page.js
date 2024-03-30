@@ -35,7 +35,7 @@ const App = () => {
         <a onClick={() => handleCategoryChange('チーム開発')} className={`tab ${selectedCategory === 'チーム開発' ? 'tab-active' : ''}`}>チーム開発</a>
       </div>
       <div className="mt-8 mb-8 text-center">
-        <a href="URL" className="text-4xl font-black text-pink-400 hover:text-pink-800" 
+        <a href="https://chat.runteq.jp/runteq/pl/pphmrcmq4fgbjr8pqnqnucycyy" className="text-4xl font-black text-pink-400 hover:text-pink-800" 
           style={{ textDecoration: "underline", textDecorationStyle: "wavy" }}>
           投票はこちらをクリック!!
         </a>
