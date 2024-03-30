@@ -236,7 +236,7 @@ const appsData = [
     appName: '16type Favorite Database',
     category: 'ルーキー',
     url: 'https://favorite-database-16type-f-5f78fa224595.herokuapp.com/',
-    appImg: '/app/16types.png',
+    appImg: '/app/16type_Favorite_Database.png',
     description: 'MBTIタイプ診断をしたことのあるユーザーが、メディア(音楽・アニメetc.)ごとに、好きな作品を投稿することにより、MBTIタイプごとの好みをデータベース化するWedアプリケーションです！（現在、音楽アーティストのみ）',
     commnet: 'ユーザー体験がより良くなるよう、フロントエンドをReactで実装したことに始め、ユーザーがより直感的に操作できるよう工夫しました！',
     githubUrl: 'https://github.com/kentoiinuma/16type-Favorite-Database'
