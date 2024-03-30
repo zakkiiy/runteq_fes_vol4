@@ -407,6 +407,17 @@ const appsData = [
     commnet: 'メインのタイマー機能には力を入れました。Stimulusを使って非同期通信を行いSPA風に実装にできました。画像のプレビューやモーダルなどもStimulusを使うことでユーザーにストレスなく使ってもらえるようにしました。',
     githubUrl: 'https://github.com/nanamitoshimasu/studying_mate'
   },
+  {
+    id: 38,
+    name: '52期A とぴ',
+    appName: '言の葉つむぎ',
+    category: 'Newcomer',
+    url: 'https://kotonoha-tsumugi.vercel.app',
+    appImg: '/app/jagabee.jpg',
+    description: '起承転結をそれぞれ異なるユーザーで執筆し、1つの物語を紡ぐアプリです。',
+    commnet: '色合いがシンプルになるのでアニメーションでおしゃれさを出してみました。',
+    githubUrl: 'https://github.com/topi0247/KotonohaTsumugi'
+  },
 
   
 ];
